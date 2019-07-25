@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  web:
+    image: nginx:fpm
+    ports:
+      - "8080:80"
+    volumes:
+      - ./monsite:/var/www/monsite
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+    links: 
+      - php  
+  php:
+    image: php:fpm
+    volumes:
+      - ./monsite:/var/www/monsite
+
