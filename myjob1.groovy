@@ -6,10 +6,7 @@ job('My Job 1') {
         }
     }
     triggers {
-        scm('H/10 * * * *')
-    }
-    wrappers {
-        php('PHP:fpm')
+        scm('H * * * *')
     }
     steps {
         shell("docker-compose up")
