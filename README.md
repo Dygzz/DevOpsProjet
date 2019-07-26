@@ -23,7 +23,9 @@ Le start.sh va permetre de lancer le service des trois branche. Il va aller clon
 différent: 
 
 >Version_1 -> port: 8080
+
 >Version_2 -> port: 8081
+
 >Version_3 -> port: 8082
 
 
